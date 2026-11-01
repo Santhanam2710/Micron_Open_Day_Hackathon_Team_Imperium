@@ -1,0 +1,1 @@
+PASS: all original integer STAT counters match EN_PERCEPTRON=0 on every requested trace.

@@ -1,0 +1,85 @@
+
+================ RUN COMPLETE ================
+STAT tag explore2_mixed
+STAT trace /mnt/c/Users/Santhana krishnan/Documents/Codex/2026-11-01/this-is-the-best-code-submission-2/outputs/micron_cache_ml/traces/mixed.trace
+STAT cfg_cache_bytes 16384
+STAT cfg_sets 64
+STAT cfg_ways 4
+STAT cfg_line_bytes 64
+STAT cfg_policy 2
+STAT cfg_en_nextline 1
+STAT cfg_en_stride 1
+STAT cfg_en_delta 1
+STAT cfg_en_throttle 1
+STAT cfg_en_phase 1
+STAT cfg_pf_insert_dist 1
+STAT cfg_degree_init 2
+STAT cfg_degree_max 8
+STAT cfg_dram_latency 100
+STAT mismatches 0
+STAT wb_corrupt_words 0
+STAT wb_lines_checked 0
+STAT oob_accesses 0
+STAT issued 104000
+STAT retired 104000
+STAT cycles 1995421
+STAT dem_lat_acc 1995420
+STAT dem_acc 104000
+STAT dem_hit 86342
+STAT dem_miss 17658
+STAT writebacks 0
+STAT pf_probe 32617
+STAT pf_probe_hit 1319
+STAT pf_fill 12052
+STAT pf_useful 11748
+STAT pf_useless 304
+STAT pf_drop_dirty 0
+STAT pf_drop_conflict 16219
+STAT pf_drop_inflight 3027
+STAT pf_drop_nomshr 0
+STAT pf_drop_late 0
+STAT pf_merge_cycles 54987
+STAT pf_interf_cycles 0
+STAT win_nextline 9
+STAT win_stride 28191
+STAT win_delta 681
+STAT gated_lowconf 163
+STAT gated_phase 20
+STAT gated_throttle 128
+STAT pf_enq 32617
+STAT pf_drop_dup 24202
+STAT pf_drop_qfull 0
+STAT pf_drop_busy 8
+STAT dc_alloc 33
+STAT dc_confirm 28587
+STAT st_retrain 427
+STAT thr_down 19
+STAT thr_up 15
+STAT thr_suppress_win 12
+STAT thr_degree_acc 2138
+STAT thr_windows 406
+STAT degree_final 1
+STAT ml_candidates 34271
+STAT ml_rejected 1654
+STAT ml_explored 552
+STAT ml_positive 11748
+STAT ml_negative 304
+STAT ml_updates 407
+STAT cfg_perceptron 1
+STAT ph_stream 25600
+STAT ph_stride 26850
+STAT ph_irreg 49501
+STAT ph_transitions 4
+STAT phase_correct 101516
+STAT phase_total 104000
+STAT dram_reads 29710
+STAT dram_writes 0
+STAT dram_bus_cycles 118840
+STAT dram_stall_cycles 0
+STAT cfg_pf_mshr 16
+STAT cfg_dram_outstanding 32
+STAT cfg_dram_burst 4
+==============================================
+
+>>> PASS: all 104000 reads returned correct data
+- tb/tb_top.sv:533: Verilog $finish

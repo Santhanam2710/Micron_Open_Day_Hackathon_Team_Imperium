@@ -1,0 +1,85 @@
+
+================ RUN COMPLETE ================
+STAT tag explore2_cnn
+STAT trace /mnt/c/Users/Santhana krishnan/Documents/Codex/2026-11-01/this-is-the-best-code-submission-2/outputs/micron_cache_ml/traces/cnn.trace
+STAT cfg_cache_bytes 16384
+STAT cfg_sets 64
+STAT cfg_ways 4
+STAT cfg_line_bytes 64
+STAT cfg_policy 2
+STAT cfg_en_nextline 1
+STAT cfg_en_stride 1
+STAT cfg_en_delta 1
+STAT cfg_en_throttle 1
+STAT cfg_en_phase 1
+STAT cfg_pf_insert_dist 1
+STAT cfg_degree_init 2
+STAT cfg_degree_max 8
+STAT cfg_dram_latency 100
+STAT mismatches 0
+STAT wb_corrupt_words 0
+STAT wb_lines_checked 0
+STAT oob_accesses 0
+STAT issued 107136
+STAT retired 107136
+STAT cycles 178391
+STAT dem_lat_acc 178390
+STAT dem_acc 107136
+STAT dem_hit 106961
+STAT dem_miss 175
+STAT writebacks 0
+STAT pf_probe 11385
+STAT pf_probe_hit 9200
+STAT pf_fill 2010
+STAT pf_useful 1336
+STAT pf_useless 674
+STAT pf_drop_dirty 0
+STAT pf_drop_conflict 173
+STAT pf_drop_inflight 0
+STAT pf_drop_nomshr 0
+STAT pf_drop_late 0
+STAT pf_merge_cycles 53053
+STAT pf_interf_cycles 0
+STAT win_nextline 2
+STAT win_stride 4419
+STAT win_delta 1479
+STAT gated_lowconf 727
+STAT gated_phase 0
+STAT gated_throttle 64
+STAT pf_enq 11385
+STAT pf_drop_dup 1887
+STAT pf_drop_qfull 0
+STAT pf_drop_busy 0
+STAT dc_alloc 10
+STAT dc_confirm 4455
+STAT st_retrain 0
+STAT thr_down 45
+STAT thr_up 45
+STAT thr_suppress_win 4
+STAT thr_degree_acc 2219
+STAT thr_windows 418
+STAT degree_final 4
+STAT ml_candidates 15981
+STAT ml_rejected 4596
+STAT ml_explored 1532
+STAT ml_positive 1336
+STAT ml_negative 674
+STAT ml_updates 800
+STAT cfg_perceptron 1
+STAT ph_stream 0
+STAT ph_stride 0
+STAT ph_irreg 105087
+STAT ph_transitions 1
+STAT phase_correct 106111
+STAT phase_total 107136
+STAT dram_reads 2187
+STAT dram_writes 0
+STAT dram_bus_cycles 8740
+STAT dram_stall_cycles 0
+STAT cfg_pf_mshr 16
+STAT cfg_dram_outstanding 32
+STAT cfg_dram_burst 4
+==============================================
+
+>>> PASS: all 107136 reads returned correct data
+- tb/tb_top.sv:533: Verilog $finish

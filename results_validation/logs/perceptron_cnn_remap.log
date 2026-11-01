@@ -1,0 +1,85 @@
+
+================ RUN COMPLETE ================
+STAT tag perceptron_cnn_remap
+STAT trace /mnt/c/Users/Santhana krishnan/Documents/Codex/2026-11-01/this-is-the-best-code-submission-2/outputs/micron_cache_ml/traces/cnn_remap.trace
+STAT cfg_cache_bytes 16384
+STAT cfg_sets 64
+STAT cfg_ways 4
+STAT cfg_line_bytes 64
+STAT cfg_policy 2
+STAT cfg_en_nextline 1
+STAT cfg_en_stride 1
+STAT cfg_en_delta 1
+STAT cfg_en_throttle 1
+STAT cfg_en_phase 1
+STAT cfg_pf_insert_dist 1
+STAT cfg_degree_init 2
+STAT cfg_degree_max 8
+STAT cfg_dram_latency 100
+STAT mismatches 0
+STAT wb_corrupt_words 0
+STAT wb_lines_checked 0
+STAT oob_accesses 0
+STAT issued 71424
+STAT retired 71424
+STAT cycles 112740
+STAT dem_lat_acc 112739
+STAT dem_acc 71424
+STAT dem_hit 71326
+STAT dem_miss 98
+STAT writebacks 0
+STAT pf_probe 7598
+STAT pf_probe_hit 6244
+STAT pf_fill 1182
+STAT pf_useful 878
+STAT pf_useless 302
+STAT pf_drop_dirty 0
+STAT pf_drop_conflict 172
+STAT pf_drop_inflight 0
+STAT pf_drop_nomshr 0
+STAT pf_drop_late 0
+STAT pf_merge_cycles 31122
+STAT pf_interf_cycles 0
+STAT win_nextline 2
+STAT win_stride 2974
+STAT win_delta 997
+STAT gated_lowconf 486
+STAT gated_phase 0
+STAT gated_throttle 0
+STAT pf_enq 7598
+STAT pf_drop_dup 926
+STAT pf_drop_qfull 0
+STAT pf_drop_busy 0
+STAT dc_alloc 10
+STAT dc_confirm 2967
+STAT st_retrain 0
+STAT thr_down 12
+STAT thr_up 14
+STAT thr_suppress_win 0
+STAT thr_degree_acc 2032
+STAT thr_windows 279
+STAT degree_final 8
+STAT ml_candidates 16897
+STAT ml_rejected 9299
+STAT ml_explored 300
+STAT ml_positive 878
+STAT ml_negative 302
+STAT ml_updates 489
+STAT cfg_perceptron 1
+STAT ph_stream 0
+STAT ph_stride 0
+STAT ph_irreg 69375
+STAT ph_transitions 1
+STAT phase_correct 70399
+STAT phase_total 71424
+STAT dram_reads 1280
+STAT dram_writes 0
+STAT dram_bus_cycles 5120
+STAT dram_stall_cycles 0
+STAT cfg_pf_mshr 16
+STAT cfg_dram_outstanding 32
+STAT cfg_dram_burst 4
+==============================================
+
+>>> PASS: all 71424 reads returned correct data
+- tb/tb_top.sv:533: Verilog $finish

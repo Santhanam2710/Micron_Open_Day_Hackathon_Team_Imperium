@@ -1,0 +1,85 @@
+
+================ RUN COMPLETE ================
+STAT tag baseline_drrip_cnn_remap
+STAT trace /mnt/c/Users/Santhana krishnan/Documents/Codex/2026-11-01/this-is-the-best-code-submission-2/outputs/micron_cache_ml/traces/cnn_remap.trace
+STAT cfg_cache_bytes 16384
+STAT cfg_sets 64
+STAT cfg_ways 4
+STAT cfg_line_bytes 64
+STAT cfg_policy 2
+STAT cfg_en_nextline 0
+STAT cfg_en_stride 0
+STAT cfg_en_delta 0
+STAT cfg_en_throttle 1
+STAT cfg_en_phase 1
+STAT cfg_pf_insert_dist 1
+STAT cfg_degree_init 2
+STAT cfg_degree_max 8
+STAT cfg_dram_latency 100
+STAT mismatches 0
+STAT wb_corrupt_words 0
+STAT wb_lines_checked 0
+STAT oob_accesses 0
+STAT issued 71424
+STAT retired 71424
+STAT cycles 138090
+STAT dem_lat_acc 138089
+STAT dem_acc 71424
+STAT dem_hit 70783
+STAT dem_miss 641
+STAT writebacks 0
+STAT pf_probe 0
+STAT pf_probe_hit 0
+STAT pf_fill 0
+STAT pf_useful 0
+STAT pf_useless 0
+STAT pf_drop_dirty 0
+STAT pf_drop_conflict 0
+STAT pf_drop_inflight 0
+STAT pf_drop_nomshr 0
+STAT pf_drop_late 0
+STAT pf_merge_cycles 0
+STAT pf_interf_cycles 0
+STAT win_nextline 0
+STAT win_stride 0
+STAT win_delta 0
+STAT gated_lowconf 0
+STAT gated_phase 0
+STAT gated_throttle 0
+STAT pf_enq 0
+STAT pf_drop_dup 0
+STAT pf_drop_qfull 0
+STAT pf_drop_busy 0
+STAT dc_alloc 0
+STAT dc_confirm 0
+STAT st_retrain 0
+STAT thr_down 0
+STAT thr_up 0
+STAT thr_suppress_win 0
+STAT thr_degree_acc 558
+STAT thr_windows 279
+STAT degree_final 2
+STAT ml_candidates 0
+STAT ml_rejected 0
+STAT ml_explored 0
+STAT ml_positive 0
+STAT ml_negative 0
+STAT ml_updates 0
+STAT cfg_perceptron 0
+STAT ph_stream 0
+STAT ph_stride 0
+STAT ph_irreg 69375
+STAT ph_transitions 1
+STAT phase_correct 70400
+STAT phase_total 71424
+STAT dram_reads 641
+STAT dram_writes 0
+STAT dram_bus_cycles 2564
+STAT dram_stall_cycles 0
+STAT cfg_pf_mshr 16
+STAT cfg_dram_outstanding 32
+STAT cfg_dram_burst 4
+==============================================
+
+>>> PASS: all 71424 reads returned correct data
+- tb/tb_top.sv:533: Verilog $finish

@@ -1,0 +1,65 @@
+{
+  "simulator": "Verilator 5.020 2024-01-01 rev (Debian 5.020-1)",
+  "configs": {
+    "baseline_drrip": {
+      "EN_NEXTLINE": 0,
+      "EN_STRIDE": 0,
+      "EN_DELTA": 0
+    },
+    "previous": {
+      "EN_PERCEPTRON": 0
+    },
+    "perceptron": {
+      "EN_PERCEPTRON": 1,
+      "ML_MARGIN": 16,
+      "ML_EXPLORE_LOG2": 5
+    }
+  },
+  "traces": {
+    "cnn_w48": {
+      "sha256": "a1df6cd07fac3a8b75c84b4be5dcdbf9ef9b4a8a337f0c0eae5488b41b3455bc",
+      "accesses": 66240
+    },
+    "cnn_remap": {
+      "sha256": "b98d601029b9acf022b611e793385b6c6afc668234cffb88ba2a157d8ec04ffe",
+      "accesses": 71424
+    },
+    "gemm_k256": {
+      "sha256": "638eee868c026d530a87d8cf8414a0244132ab8cd6d011bf0a808ef1884e6da5",
+      "accesses": 30720
+    },
+    "mixed_short": {
+      "sha256": "ba6902f5f9f06d8c4f47a6115c002fba18c3fd2fb6ef7f5c2279fd411554a743",
+      "accesses": 52000
+    },
+    "rw_seed17": {
+      "sha256": "84f96964f35231e58822114600058d771b12ca0bfe9f9620913b04a126abb8b4",
+      "accesses": 10240
+    },
+    "rw_seed29": {
+      "sha256": "df86eccee9c063c18ae794729cba07a0aaa2b95d2af35e90a5e15b7fb21b0333",
+      "accesses": 10240
+    },
+    "rw_seed43": {
+      "sha256": "e9d929c8914cd2a0a1d4a547e891f6d7c7250a84dbe98ec1ed2ac317ebeb88cb",
+      "accesses": 10240
+    }
+  },
+  "source_sha256": {
+    "rtl/ai_cache_top.sv": "6f5faf31ed25c5447a361f46298ea264f6d4bc3902d76d16ce0968ccbf9bc268",
+    "rtl/cache_controller.sv": "e194a095b9afe798a72c1992fa42fa98b304280c9030556dccfa79a1cc0ba5dc",
+    "rtl/cache_pkg.sv": "42bee9cb049ab0b83db5b7ded2e478d8fe0cce1449b6eab9ea8bdd0a613fa55d",
+    "rtl/dram_model.sv": "7d7b89c7a8f1e11838f90176ab2d58e3aff3e356c66cb33c54f9500109c890e2",
+    "rtl/pf_arbiter.sv": "7913203b662a2c6e0dd3aaf25da2bb561fb8f77b2b8a98a6054583a7912e80bb",
+    "rtl/pf_delta_corr.sv": "5a7fbcc9dae5997aabf9a0fe8003b8020ef7f22264a26d8746394340c1f8034b",
+    "rtl/pf_engine.sv": "0f3f3cc0d7302725a41feccd907c860eea5297ae37cf1ed7aee020e504e77d72",
+    "rtl/pf_nextline.sv": "64b3ec7da08c62428f1998a442ea361115d08c004749268b6bc8d9a4f9d62a4c",
+    "rtl/pf_perceptron.sv": "b26764f15de9614140812ce85ddfd2f068c52973c94a5de5d6551ec5b591bd96",
+    "rtl/pf_stride.sv": "d986441ea53ba9acf10202f5e8389933f103706041eee99d93b802f992e8721c",
+    "rtl/pf_throttle.sv": "84a1b542a1f928f670713e6d4f18857dfb1b4323f37afdb5ff724eb16eb7bda4",
+    "rtl/phase_detect.sv": "cc93f4e36741b20d23af5e9bba4b54c7218a36c581e0a773438d4ebe9b592e08",
+    "rtl/repl_policy.sv": "2d33b6d3345ba08ec33c0e9d9a738cb1ad8e49aa84857db5eb93fa16baf148a0",
+    "rtl/synth_top.sv": "b8cf161a40a327740b0508273d153c024ce4b7194de21921b08d8cc7a2623264",
+    "tb/tb_top.sv": "2ed26460bf0253f3b1dcd238a78eb1f3901fae7f4ffc4340c7a093112cb7664f"
+  }
+}

@@ -1,0 +1,53 @@
+# ============================================================================
+#  ai_cache.qsf -- Quartus Prime settings file
+# ----------------------------------------------------------------------------
+#  Target: Cyclone V 5CSEMA5F31C6 (DE1-SoC).  Change DEVICE/FAMILY for your
+#  board; nothing in the RTL is device-specific.  Common alternatives:
+#     DE10-Lite   : FAMILY "MAX 10"    DEVICE 10M50DAF484C7G
+#     DE0-Nano    : FAMILY "Cyclone IV E"  DEVICE EP4CE22F17C6
+#  Note that MAX 10 and Cyclone IV use M9K, not M10K.  If the fitter reports
+#  the cache data array in logic instead of memory, change the ramstyle
+#  attribute in rtl/cache_controller.sv from "M10K" to "M9K".
+# ============================================================================
+
+set_global_assignment -name FAMILY "Cyclone V"
+set_global_assignment -name DEVICE 5CSEMA5F31C6
+set_global_assignment -name TOP_LEVEL_ENTITY synth_top
+set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
+
+# ---- SystemVerilog-2012 for every source file ------------------------------
+set_global_assignment -name SYSTEMVERILOG_FILE ../rtl/cache_pkg.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../rtl/repl_policy.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../rtl/pf_nextline.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../rtl/pf_stride.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../rtl/pf_delta_corr.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../rtl/phase_detect.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../rtl/pf_throttle.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../rtl/pf_arbiter.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../rtl/pf_perceptron.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../rtl/pf_engine.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../rtl/cache_controller.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../rtl/ai_cache_top.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../rtl/synth_top.sv
+
+set_global_assignment -name SDC_FILE ai_cache.sdc
+
+# ---- Synthesis / fitter ----------------------------------------------------
+set_global_assignment -name VERILOG_INPUT_VERSION SYSTEMVERILOG_2005
+set_global_assignment -name OPTIMIZATION_MODE "HIGH PERFORMANCE EFFORT"
+set_global_assignment -name AUTO_RAM_RECOGNITION ON
+set_global_assignment -name AUTO_ROM_RECOGNITION ON
+set_global_assignment -name ALLOW_ANY_RAM_SIZE_FOR_RECOGNITION ON
+set_global_assignment -name REMOVE_DUPLICATE_REGISTERS OFF
+set_global_assignment -name NUM_PARALLEL_PROCESSORS ALL
+
+# The memory port is far wider than any real package.  Virtual pins keep the
+# fitter from failing on pin count while still reporting true logic and
+# memory utilisation and still closing timing on internal paths.
+set_instance_assignment -name VIRTUAL_PIN ON -to o_mem_wdata
+set_instance_assignment -name VIRTUAL_PIN ON -to i_mem_resp_data
+set_instance_assignment -name VIRTUAL_PIN ON -to o_mem_addr
+set_instance_assignment -name VIRTUAL_PIN ON -to i_cpu_addr
+set_instance_assignment -name VIRTUAL_PIN ON -to i_cpu_wdata
+set_instance_assignment -name VIRTUAL_PIN ON -to o_cpu_rdata
+set_instance_assignment -name VIRTUAL_PIN ON -to o_status

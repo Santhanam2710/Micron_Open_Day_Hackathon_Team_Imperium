@@ -1,0 +1,294 @@
+Building 36 configurations (8 parallel)...
+  ok   A1_baseline_drrip
+  ok   A0_baseline_lru
+  ok   B1_nextline_only
+  ok   B3_delta_only
+  ok   B2_stride_only
+  ok   C1_mmap_throttle
+  ok   B4_mmap_all3
+  ok   D1_full
+  ok   DSE_size_4KB
+  ok   E1_full_no_throttle
+  FAIL DSE_assoc_1way
+  ok   E3_full_no_pfdistant
+  ok   E2_full_no_phase
+  ok   DSE_size_8KB
+  ok   DSE_size_32KB
+  ok   DSE_size_16KB
+  ok   DSE_size_64KB
+  ok   DSE_assoc_2way
+  ok   DSE_assoc_4way
+  ok   DSE_policy_lru
+  ok   DSE_assoc_8way
+  ok   DSE_mshr_1
+  ok   DSE_policy_srrip
+  ok   DSE_policy_drrip
+  ok   DSE_mshr_2
+  ok   DSE_mshr_4
+  ok   DSE_mshr_8
+  ok   DSE_mshr_16
+  ok   DSE_degree_1
+  ok   DSE_degree_2
+  ok   DSE_degree_8
+  ok   DSE_degree_4
+  ok   DSE_dchist_3
+  ok   DSE_dchist_4
+  ok   DSE_dchist_6
+  ok   DSE_dchist_8
+
+Running 35 configs x 7 traces...
+  baseline stream      hit= 93.75%  cpa=    7.50
+  baseline colsweep    hit=  0.18%  cpa=  104.81
+  baseline cnn         hit= 99.15%  cpa=    1.88
+  baseline embedding   hit= 94.84%  cpa=    6.37
+  baseline gemm        hit= 88.61%  cpa=   12.85
+  baseline mixed       hit= 71.73%  cpa=   30.40
+  baseline writeheavy  hit= 78.12%  cpa=   46.24
+  A0_baseline_lru          stream      hit= 93.75%  cpa=    7.50  spd= 1.00x
+  A0_baseline_lru          colsweep    hit=  0.00%  cpa=  105.00  spd= 1.00x
+  A0_baseline_lru          cnn         hit= 99.16%  cpa=    1.87  spd= 1.01x
+  A0_baseline_lru          embedding   hit= 94.84%  cpa=    6.37  spd= 1.00x
+  A0_baseline_lru          gemm        hit= 88.65%  cpa=   12.80  spd= 1.00x
+  A0_baseline_lru          mixed       hit= 71.83%  cpa=   30.29  spd= 1.00x
+  A0_baseline_lru          writeheavy  hit= 78.12%  cpa=   46.24  spd= 1.00x
+  A1_baseline_drrip        stream      hit= 93.75%  cpa=    7.50  spd= 1.00x
+  A1_baseline_drrip        colsweep    hit=  0.18%  cpa=  104.81  spd= 1.00x
+  A1_baseline_drrip        cnn         hit= 99.15%  cpa=    1.88  spd= 1.00x
+  A1_baseline_drrip        embedding   hit= 94.84%  cpa=    6.37  spd= 1.00x
+  A1_baseline_drrip        gemm        hit= 88.61%  cpa=   12.85  spd= 1.00x
+  A1_baseline_drrip        mixed       hit= 71.73%  cpa=   30.40  spd= 1.00x
+  A1_baseline_drrip        writeheavy  hit= 78.12%  cpa=   46.24  spd= 1.00x
+  B1_nextline_only         stream      hit=100.00%  cpa=    3.84  spd= 1.95x
+  B1_nextline_only         colsweep    hit=  0.18%  cpa=  104.81  spd= 1.00x
+  B1_nextline_only         cnn         hit= 99.57%  cpa=    1.46  spd= 1.28x
+  B1_nextline_only         embedding   hit= 94.84%  cpa=    6.37  spd= 1.00x
+  B1_nextline_only         gemm        hit= 88.61%  cpa=   12.85  spd= 1.00x
+  B1_nextline_only         mixed       hit= 73.58%  cpa=   29.31  spd= 1.04x
+  B1_nextline_only         writeheavy  hit= 78.44%  cpa=   46.06  spd= 1.00x  <<< DATA MISMATCH
+  B2_stride_only           stream      hit= 99.98%  cpa=    3.85  spd= 1.95x
+  B2_stride_only           colsweep    hit= 50.40%  cpa=   54.06  spd= 1.94x
+  B2_stride_only           cnn         hit= 99.57%  cpa=    1.47  spd= 1.28x
+  B2_stride_only           embedding   hit= 94.84%  cpa=    6.37  spd= 1.00x
+  B2_stride_only           gemm        hit= 98.34%  cpa=    7.32  spd= 1.76x
+  B2_stride_only           mixed       hit= 86.13%  cpa=   16.68  spd= 1.82x
+  B2_stride_only           writeheavy  hit= 78.44%  cpa=   46.06  spd= 1.00x
+  B3_delta_only            stream      hit= 99.99%  cpa=    3.85  spd= 1.95x
+  B3_delta_only            colsweep    hit= 49.52%  cpa=   54.96  spd= 1.91x
+  B3_delta_only            cnn         hit= 99.81%  cpa=    1.73  spd= 1.09x
+  B3_delta_only            embedding   hit= 94.84%  cpa=    6.37  spd= 1.00x
+  B3_delta_only            gemm        hit= 88.61%  cpa=   12.85  spd= 1.00x
+  B3_delta_only            mixed       hit= 85.99%  cpa=   16.89  spd= 1.80x
+  B3_delta_only            writeheavy  hit= 78.44%  cpa=   46.07  spd= 1.00x  <<< DATA MISMATCH
+  B4_mmap_all3             stream      hit=100.00%  cpa=    3.84  spd= 1.95x
+  B4_mmap_all3             colsweep    hit= 50.40%  cpa=   54.05  spd= 1.94x
+  B4_mmap_all3             cnn         hit= 99.91%  cpa=    1.82  spd= 1.03x
+  B4_mmap_all3             embedding   hit= 94.84%  cpa=    6.37  spd= 1.00x
+  B4_mmap_all3             gemm        hit= 98.34%  cpa=    7.32  spd= 1.76x
+  B4_mmap_all3             mixed       hit= 86.20%  cpa=   16.70  spd= 1.82x
+  B4_mmap_all3             writeheavy  hit= 78.44%  cpa=   46.06  spd= 1.00x  <<< DATA MISMATCH
+  C1_mmap_throttle         stream      hit=100.00%  cpa=    1.15  spd= 6.55x
+  C1_mmap_throttle         colsweep    hit= 37.78%  cpa=   66.85  spd= 1.57x
+  C1_mmap_throttle         cnn         hit= 99.94%  cpa=    1.78  spd= 1.06x
+  C1_mmap_throttle         embedding   hit= 94.84%  cpa=    6.37  spd= 1.00x
+  C1_mmap_throttle         gemm        hit= 95.77%  cpa=    5.45  spd= 2.36x
+  C1_mmap_throttle         mixed       hit= 83.11%  cpa=   19.13  spd= 1.59x
+  C1_mmap_throttle         writeheavy  hit= 78.44%  cpa=   45.98  spd= 1.01x
+  D1_full                  stream      hit=100.00%  cpa=    1.14  spd= 6.55x
+  D1_full                  colsweep    hit= 37.78%  cpa=   66.85  spd= 1.57x
+  D1_full                  cnn         hit= 99.83%  cpa=    1.64  spd= 1.15x
+  D1_full                  embedding   hit= 94.84%  cpa=    6.37  spd= 1.00x
+  D1_full                  gemm        hit= 95.78%  cpa=    5.44  spd= 2.36x
+  D1_full                  mixed       hit= 82.97%  cpa=   19.26  spd= 1.58x
+  D1_full                  writeheavy  hit= 78.44%  cpa=   45.98  spd= 1.01x
+  E1_full_no_throttle      stream      hit=100.00%  cpa=    3.84  spd= 1.95x
+  E1_full_no_throttle      colsweep    hit= 50.40%  cpa=   54.05  spd= 1.94x
+  E1_full_no_throttle      cnn         hit= 99.79%  cpa=    1.67  spd= 1.13x
+  E1_full_no_throttle      embedding   hit= 94.84%  cpa=    6.37  spd= 1.00x
+  E1_full_no_throttle      gemm        hit= 98.31%  cpa=    7.34  spd= 1.75x
+  E1_full_no_throttle      mixed       hit= 86.16%  cpa=   16.66  spd= 1.83x
+  E1_full_no_throttle      writeheavy  hit= 78.44%  cpa=   46.06  spd= 1.00x  <<< DATA MISMATCH
+  E2_full_no_phase         stream      hit=100.00%  cpa=    1.15  spd= 6.55x
+  E2_full_no_phase         colsweep    hit= 37.78%  cpa=   66.85  spd= 1.57x
+  E2_full_no_phase         cnn         hit= 99.94%  cpa=    1.78  spd= 1.06x
+  E2_full_no_phase         embedding   hit= 94.84%  cpa=    6.37  spd= 1.00x
+  E2_full_no_phase         gemm        hit= 95.77%  cpa=    5.45  spd= 2.36x
+  E2_full_no_phase         mixed       hit= 83.11%  cpa=   19.13  spd= 1.59x
+  E2_full_no_phase         writeheavy  hit= 78.44%  cpa=   45.98  spd= 1.01x
+  E3_full_no_pfdistant     stream      hit=100.00%  cpa=    1.14  spd= 6.55x
+  E3_full_no_pfdistant     colsweep    hit= 38.27%  cpa=   66.33  spd= 1.58x
+  E3_full_no_pfdistant     cnn         hit= 99.94%  cpa=    1.69  spd= 1.11x
+  E3_full_no_pfdistant     embedding   hit= 94.84%  cpa=    6.37  spd= 1.00x
+  E3_full_no_pfdistant     gemm        hit= 95.78%  cpa=    5.43  spd= 2.36x
+  E3_full_no_pfdistant     mixed       hit= 83.16%  cpa=   19.03  spd= 1.60x
+  E3_full_no_pfdistant     writeheavy  hit= 78.44%  cpa=   45.98  spd= 1.01x
+  DSE_size_4KB             stream      hit=100.00%  cpa=    1.14  spd= 6.55x
+  DSE_size_4KB             colsweep    hit=  0.05%  cpa=  104.95  spd= 1.00x
+  DSE_size_4KB             cnn         hit= 99.11%  cpa=    3.00  spd= 0.63x
+  DSE_size_4KB             embedding   hit= 94.03%  cpa=    7.21  spd= 0.88x
+  DSE_size_4KB             gemm        hit= 88.40%  cpa=   13.07  spd= 0.98x
+  DSE_size_4KB             mixed       hit= 73.25%  cpa=   29.10  spd= 1.04x
+  DSE_size_4KB             writeheavy  hit= 78.20%  cpa=   46.44  spd= 1.00x
+  DSE_size_8KB             stream      hit=100.00%  cpa=    1.14  spd= 6.55x
+  DSE_size_8KB             colsweep    hit= 12.72%  cpa=   92.15  spd= 1.14x
+  DSE_size_8KB             cnn         hit= 99.69%  cpa=    2.58  spd= 0.73x
+  DSE_size_8KB             embedding   hit= 94.31%  cpa=    6.92  spd= 0.92x
+  DSE_size_8KB             gemm        hit= 91.06%  cpa=   10.30  spd= 1.25x
+  DSE_size_8KB             mixed       hit= 76.57%  cpa=   25.80  spd= 1.18x
+  DSE_size_8KB             writeheavy  hit= 78.28%  cpa=   46.29  spd= 1.00x
+  DSE_size_16KB            stream      hit=100.00%  cpa=    1.14  spd= 6.55x
+  DSE_size_16KB            colsweep    hit= 37.78%  cpa=   66.85  spd= 1.57x
+  DSE_size_16KB            cnn         hit= 99.83%  cpa=    1.64  spd= 1.15x
+  DSE_size_16KB            embedding   hit= 94.84%  cpa=    6.37  spd= 1.00x
+  DSE_size_16KB            gemm        hit= 95.78%  cpa=    5.44  spd= 2.36x
+  DSE_size_16KB            mixed       hit= 82.97%  cpa=   19.26  spd= 1.58x
+  DSE_size_16KB            writeheavy  hit= 78.44%  cpa=   45.98  spd= 1.01x
+  DSE_size_32KB            stream      hit=100.00%  cpa=    1.14  spd= 6.55x
+  DSE_size_32KB            colsweep    hit= 87.19%  cpa=   16.83  spd= 6.23x
+  DSE_size_32KB            cnn         hit= 99.98%  cpa=    1.23  spd= 1.53x
+  DSE_size_32KB            embedding   hit= 95.59%  cpa=    5.58  spd= 1.14x
+  DSE_size_32KB            gemm        hit= 98.38%  cpa=    4.08  spd= 3.15x
+  DSE_size_32KB            mixed       hit= 95.66%  cpa=    6.32  spd= 4.81x
+  DSE_size_32KB            writeheavy  hit= 78.76%  cpa=   45.36  spd= 1.02x
+  DSE_size_64KB            stream      hit=100.00%  cpa=    1.14  spd= 6.55x
+  DSE_size_64KB            colsweep    hit= 87.20%  cpa=   16.72  spd= 6.27x
+  DSE_size_64KB            cnn         hit= 99.99%  cpa=    1.01  spd= 1.87x
+  DSE_size_64KB            embedding   hit= 96.45%  cpa=    4.69  spd= 1.36x
+  DSE_size_64KB            gemm        hit= 98.47%  cpa=    3.73  spd= 3.44x
+  DSE_size_64KB            mixed       hit= 95.79%  cpa=    6.07  spd= 5.01x
+  DSE_size_64KB            writeheavy  hit= 79.40%  cpa=   44.12  spd= 1.05x
+  DSE_assoc_2way           stream      hit=100.00%  cpa=    1.14  spd= 6.55x
+  DSE_assoc_2way           colsweep    hit= 87.17%  cpa=   16.92  spd= 6.19x
+  DSE_assoc_2way           cnn         hit= 99.75%  cpa=    1.51  spd= 1.25x
+  DSE_assoc_2way           embedding   hit= 94.83%  cpa=    6.38  spd= 1.00x
+  DSE_assoc_2way           gemm        hit= 98.33%  cpa=    4.13  spd= 3.11x
+  DSE_assoc_2way           mixed       hit= 95.43%  cpa=    6.58  spd= 4.62x
+  DSE_assoc_2way           writeheavy  hit= 78.44%  cpa=   45.98  spd= 1.01x
+  DSE_assoc_4way           stream      hit=100.00%  cpa=    1.14  spd= 6.55x
+  DSE_assoc_4way           colsweep    hit= 37.78%  cpa=   66.85  spd= 1.57x
+  DSE_assoc_4way           cnn         hit= 99.83%  cpa=    1.64  spd= 1.15x
+  DSE_assoc_4way           embedding   hit= 94.84%  cpa=    6.37  spd= 1.00x
+  DSE_assoc_4way           gemm        hit= 95.78%  cpa=    5.44  spd= 2.36x
+  DSE_assoc_4way           mixed       hit= 82.97%  cpa=   19.26  spd= 1.58x
+  DSE_assoc_4way           writeheavy  hit= 78.44%  cpa=   45.98  spd= 1.01x
+  DSE_assoc_8way           stream      hit=100.00%  cpa=    1.14  spd= 6.55x
+  DSE_assoc_8way           colsweep    hit= 12.83%  cpa=   92.04  spd= 1.14x
+  DSE_assoc_8way           cnn         hit= 99.90%  cpa=    1.63  spd= 1.15x
+  DSE_assoc_8way           embedding   hit= 94.83%  cpa=    6.37  spd= 1.00x
+  DSE_assoc_8way           gemm        hit= 91.06%  cpa=   10.29  spd= 1.25x
+  DSE_assoc_8way           mixed       hit= 76.82%  cpa=   25.42  spd= 1.20x
+  DSE_assoc_8way           writeheavy  hit= 78.44%  cpa=   45.98  spd= 1.01x
+  DSE_policy_lru           stream      hit=100.00%  cpa=    1.14  spd= 6.55x
+  DSE_policy_lru           colsweep    hit= 37.63%  cpa=   67.00  spd= 1.56x
+  DSE_policy_lru           cnn         hit= 99.99%  cpa=    1.01  spd= 1.86x
+  DSE_policy_lru           embedding   hit= 94.84%  cpa=    6.37  spd= 1.00x
+  DSE_policy_lru           gemm        hit= 95.85%  cpa=    5.36  spd= 2.40x
+  DSE_policy_lru           mixed       hit= 83.06%  cpa=   19.01  spd= 1.60x
+  DSE_policy_lru           writeheavy  hit= 78.44%  cpa=   45.98  spd= 1.01x
+  DSE_policy_srrip         stream      hit=100.00%  cpa=    1.14  spd= 6.55x
+  DSE_policy_srrip         colsweep    hit= 37.63%  cpa=   66.99  spd= 1.56x
+  DSE_policy_srrip         cnn         hit= 99.83%  cpa=    1.64  spd= 1.15x
+  DSE_policy_srrip         embedding   hit= 94.84%  cpa=    6.37  spd= 1.00x
+  DSE_policy_srrip         gemm        hit= 95.81%  cpa=    5.41  spd= 2.38x
+  DSE_policy_srrip         mixed       hit= 82.98%  cpa=   19.25  spd= 1.58x
+  DSE_policy_srrip         writeheavy  hit= 78.44%  cpa=   45.98  spd= 1.01x
+  DSE_policy_drrip         stream      hit=100.00%  cpa=    1.14  spd= 6.55x
+  DSE_policy_drrip         colsweep    hit= 37.78%  cpa=   66.85  spd= 1.57x
+  DSE_policy_drrip         cnn         hit= 99.83%  cpa=    1.64  spd= 1.15x
+  DSE_policy_drrip         embedding   hit= 94.84%  cpa=    6.37  spd= 1.00x
+  DSE_policy_drrip         gemm        hit= 95.78%  cpa=    5.44  spd= 2.36x
+  DSE_policy_drrip         mixed       hit= 82.97%  cpa=   19.26  spd= 1.58x
+  DSE_policy_drrip         writeheavy  hit= 78.44%  cpa=   45.98  spd= 1.01x
+  DSE_mshr_1               stream      hit= 96.87%  cpa=    4.25  spd= 1.76x
+  DSE_mshr_1               colsweep    hit= 12.82%  cpa=   92.05  spd= 1.14x
+  DSE_mshr_1               cnn         hit= 99.70%  cpa=    2.26  spd= 0.83x
+  DSE_mshr_1               embedding   hit= 94.84%  cpa=    6.37  spd= 1.00x
+  DSE_mshr_1               gemm        hit= 91.14%  cpa=   10.22  spd= 1.26x
+  DSE_mshr_1               mixed       hit= 75.98%  cpa=   26.35  spd= 1.15x
+  DSE_mshr_1               writeheavy  hit= 78.20%  cpa=   46.15  spd= 1.00x
+  DSE_mshr_2               stream      hit= 98.75%  cpa=    3.44  spd= 2.18x
+  DSE_mshr_2               colsweep    hit= 25.29%  cpa=   79.45  spd= 1.32x
+  DSE_mshr_2               cnn         hit= 99.78%  cpa=    1.75  spd= 1.07x
+  DSE_mshr_2               embedding   hit= 94.84%  cpa=    6.37  spd= 1.00x
+  DSE_mshr_2               gemm        hit= 93.56%  cpa=    7.72  spd= 1.67x
+  DSE_mshr_2               mixed       hit= 79.58%  cpa=   22.95  spd= 1.32x
+  DSE_mshr_2               writeheavy  hit= 78.28%  cpa=   46.11  spd= 1.00x
+  DSE_mshr_4               stream      hit=100.00%  cpa=    2.10  spd= 3.57x
+  DSE_mshr_4               colsweep    hit= 37.78%  cpa=   66.85  spd= 1.57x
+  DSE_mshr_4               cnn         hit= 99.88%  cpa=    1.61  spd= 1.17x
+  DSE_mshr_4               embedding   hit= 94.84%  cpa=    6.37  spd= 1.00x
+  DSE_mshr_4               gemm        hit= 95.75%  cpa=    5.46  spd= 2.35x
+  DSE_mshr_4               mixed       hit= 83.12%  cpa=   19.26  spd= 1.58x
+  DSE_mshr_4               writeheavy  hit= 78.37%  cpa=   46.04  spd= 1.00x
+  DSE_mshr_8               stream      hit=100.00%  cpa=    1.18  spd= 6.38x
+  DSE_mshr_8               colsweep    hit= 37.78%  cpa=   66.85  spd= 1.57x
+  DSE_mshr_8               cnn         hit= 99.83%  cpa=    1.64  spd= 1.15x
+  DSE_mshr_8               embedding   hit= 94.84%  cpa=    6.37  spd= 1.00x
+  DSE_mshr_8               gemm        hit= 95.77%  cpa=    5.45  spd= 2.36x
+  DSE_mshr_8               mixed       hit= 83.05%  cpa=   19.07  spd= 1.59x
+  DSE_mshr_8               writeheavy  hit= 78.44%  cpa=   45.98  spd= 1.01x
+  DSE_mshr_16              stream      hit=100.00%  cpa=    1.14  spd= 6.55x
+  DSE_mshr_16              colsweep    hit= 37.78%  cpa=   66.85  spd= 1.57x
+  DSE_mshr_16              cnn         hit= 99.83%  cpa=    1.64  spd= 1.15x
+  DSE_mshr_16              embedding   hit= 94.84%  cpa=    6.37  spd= 1.00x
+  DSE_mshr_16              gemm        hit= 95.78%  cpa=    5.44  spd= 2.36x
+  DSE_mshr_16              mixed       hit= 82.97%  cpa=   19.26  spd= 1.58x
+  DSE_mshr_16              writeheavy  hit= 78.44%  cpa=   45.98  spd= 1.01x
+  DSE_degree_1             stream      hit=100.00%  cpa=    3.84  spd= 1.95x
+  DSE_degree_1             colsweep    hit= 49.96%  cpa=   54.50  spd= 1.92x
+  DSE_degree_1             cnn         hit= 99.74%  cpa=    1.67  spd= 1.13x
+  DSE_degree_1             embedding   hit= 94.84%  cpa=    6.37  spd= 1.00x
+  DSE_degree_1             gemm        hit= 97.92%  cpa=    7.41  spd= 1.73x
+  DSE_degree_1             mixed       hit= 86.07%  cpa=   16.77  spd= 1.81x
+  DSE_degree_1             writeheavy  hit= 78.44%  cpa=   46.06  spd= 1.00x  <<< DATA MISMATCH
+  DSE_degree_2             stream      hit=100.00%  cpa=    3.84  spd= 1.95x
+  DSE_degree_2             colsweep    hit= 50.40%  cpa=   54.05  spd= 1.94x
+  DSE_degree_2             cnn         hit= 99.79%  cpa=    1.67  spd= 1.13x
+  DSE_degree_2             embedding   hit= 94.84%  cpa=    6.37  spd= 1.00x
+  DSE_degree_2             gemm        hit= 98.31%  cpa=    7.34  spd= 1.75x
+  DSE_degree_2             mixed       hit= 86.16%  cpa=   16.66  spd= 1.83x
+  DSE_degree_2             writeheavy  hit= 78.44%  cpa=   46.06  spd= 1.00x  <<< DATA MISMATCH
+  DSE_degree_4             stream      hit=100.00%  cpa=    1.91  spd= 3.93x
+  DSE_degree_4             colsweep    hit= 74.91%  cpa=   29.30  spd= 3.58x
+  DSE_degree_4             cnn         hit= 99.87%  cpa=    1.57  spd= 1.20x
+  DSE_degree_4             embedding   hit= 94.84%  cpa=    6.37  spd= 1.00x
+  DSE_degree_4             gemm        hit= 95.83%  cpa=    5.35  spd= 2.40x
+  DSE_degree_4             mixed       hit= 92.40%  cpa=    9.97  spd= 3.05x
+  DSE_degree_4             writeheavy  hit= 78.44%  cpa=   45.98  spd= 1.01x
+  DSE_degree_8             stream      hit=100.00%  cpa=    1.13  spd= 6.61x
+  DSE_degree_8             colsweep    hit= 37.64%  cpa=   66.99  spd= 1.56x
+  DSE_degree_8             cnn         hit= 99.81%  cpa=    1.70  spd= 1.11x
+  DSE_degree_8             embedding   hit= 94.84%  cpa=    6.37  spd= 1.00x
+  DSE_degree_8             gemm        hit= 95.76%  cpa=    5.44  spd= 2.36x
+  DSE_degree_8             mixed       hit= 83.04%  cpa=   19.21  spd= 1.58x
+  DSE_degree_8             writeheavy  hit= 78.44%  cpa=   45.94  spd= 1.01x
+  DSE_dchist_3             stream      hit=100.00%  cpa=    1.14  spd= 6.55x
+  DSE_dchist_3             colsweep    hit= 37.78%  cpa=   66.85  spd= 1.57x
+  DSE_dchist_3             cnn         hit= 99.74%  cpa=    1.72  spd= 1.10x
+  DSE_dchist_3             embedding   hit= 94.84%  cpa=    6.37  spd= 1.00x
+  DSE_dchist_3             gemm        hit= 95.78%  cpa=    5.44  spd= 2.36x
+  DSE_dchist_3             mixed       hit= 83.08%  cpa=   19.10  spd= 1.59x
+  DSE_dchist_3             writeheavy  hit= 78.44%  cpa=   45.98  spd= 1.01x
+  DSE_dchist_4             stream      hit=100.00%  cpa=    1.14  spd= 6.55x
+  DSE_dchist_4             colsweep    hit= 37.78%  cpa=   66.85  spd= 1.57x
+  DSE_dchist_4             cnn         hit= 99.95%  cpa=    1.77  spd= 1.06x
+  DSE_dchist_4             embedding   hit= 94.84%  cpa=    6.37  spd= 1.00x
+  DSE_dchist_4             gemm        hit= 95.78%  cpa=    5.44  spd= 2.36x
+  DSE_dchist_4             mixed       hit= 83.16%  cpa=   19.10  spd= 1.59x
+  DSE_dchist_4             writeheavy  hit= 78.44%  cpa=   45.98  spd= 1.01x
+  DSE_dchist_6             stream      hit=100.00%  cpa=    1.14  spd= 6.55x
+  DSE_dchist_6             colsweep    hit= 37.78%  cpa=   66.85  spd= 1.57x
+  DSE_dchist_6             cnn         hit= 99.83%  cpa=    1.64  spd= 1.15x
+  DSE_dchist_6             embedding   hit= 94.84%  cpa=    6.37  spd= 1.00x
+  DSE_dchist_6             gemm        hit= 95.78%  cpa=    5.44  spd= 2.36x
+  DSE_dchist_6             mixed       hit= 82.97%  cpa=   19.26  spd= 1.58x
+  DSE_dchist_6             writeheavy  hit= 78.44%  cpa=   45.98  spd= 1.01x
+  DSE_dchist_8             stream      hit=100.00%  cpa=    1.14  spd= 6.55x
+  DSE_dchist_8             colsweep    hit= 37.78%  cpa=   66.85  spd= 1.57x
+  DSE_dchist_8             cnn         hit= 99.97%  cpa=    1.78  spd= 1.06x
+  DSE_dchist_8             embedding   hit= 94.84%  cpa=    6.37  spd= 1.00x
+  DSE_dchist_8             gemm        hit= 95.78%  cpa=    5.44  spd= 2.36x
+  DSE_dchist_8             mixed       hit= 83.14%  cpa=   19.11  spd= 1.59x
+  DSE_dchist_8             writeheavy  hit= 78.44%  cpa=   45.98  spd= 1.01x
+
+wrote /home/claude/micron_cache/results/sweep.csv  (245 rows)
+correctness: 6 CONFIG(S) FAILED -- results invalid

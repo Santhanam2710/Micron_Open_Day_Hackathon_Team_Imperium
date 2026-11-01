@@ -1,0 +1,85 @@
+
+================ RUN COMPLETE ================
+STAT tag margin32_stream
+STAT trace /mnt/c/Users/Santhana krishnan/Documents/Codex/2026-11-01/this-is-the-best-code-submission-2/outputs/micron_cache_ml/traces/stream.trace
+STAT cfg_cache_bytes 16384
+STAT cfg_sets 64
+STAT cfg_ways 4
+STAT cfg_line_bytes 64
+STAT cfg_policy 2
+STAT cfg_en_nextline 1
+STAT cfg_en_stride 1
+STAT cfg_en_delta 1
+STAT cfg_en_throttle 1
+STAT cfg_en_phase 1
+STAT cfg_pf_insert_dist 1
+STAT cfg_degree_init 2
+STAT cfg_degree_max 8
+STAT cfg_dram_latency 100
+STAT mismatches 0
+STAT wb_corrupt_words 0
+STAT wb_lines_checked 0
+STAT oob_accesses 0
+STAT issued 102400
+STAT retired 102400
+STAT cycles 117226
+STAT dem_lat_acc 117225
+STAT dem_acc 102400
+STAT dem_hit 102398
+STAT dem_miss 2
+STAT writebacks 0
+STAT pf_probe 18564
+STAT pf_probe_hit 12
+STAT pf_fill 6400
+STAT pf_useful 6398
+STAT pf_useless 0
+STAT pf_drop_dirty 0
+STAT pf_drop_conflict 0
+STAT pf_drop_inflight 12146
+STAT pf_drop_nomshr 0
+STAT pf_drop_late 0
+STAT pf_merge_cycles 14616
+STAT pf_interf_cycles 0
+STAT win_nextline 27
+STAT win_stride 6372
+STAT win_delta 0
+STAT gated_lowconf 0
+STAT gated_phase 0
+STAT gated_throttle 0
+STAT pf_enq 18564
+STAT pf_drop_dup 4070
+STAT pf_drop_qfull 0
+STAT pf_drop_busy 0
+STAT dc_alloc 4
+STAT dc_confirm 6394
+STAT st_retrain 0
+STAT thr_down 0
+STAT thr_up 2
+STAT thr_suppress_win 0
+STAT thr_degree_acc 3190
+STAT thr_windows 400
+STAT degree_final 8
+STAT ml_candidates 18564
+STAT ml_rejected 0
+STAT ml_explored 0
+STAT ml_positive 6398
+STAT ml_negative 0
+STAT ml_updates 18
+STAT cfg_perceptron 1
+STAT ph_stream 100351
+STAT ph_stride 0
+STAT ph_irreg 0
+STAT ph_transitions 1
+STAT phase_correct 101375
+STAT phase_total 102400
+STAT dram_reads 6408
+STAT dram_writes 0
+STAT dram_bus_cycles 25608
+STAT dram_stall_cycles 0
+STAT cfg_pf_mshr 16
+STAT cfg_dram_outstanding 32
+STAT cfg_dram_burst 4
+==============================================
+
+>>> PASS: all 102400 reads returned correct data
+- tb/tb_top.sv:533: Verilog $finish
